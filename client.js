@@ -8,7 +8,7 @@ const pgclient = new Client({
   password: 'postgres',
   database: 'postgres'
   */
-  connectionString: 'postgresql://postgres:postgres@postgres:5432/postgres'
+  connectionString: `postgresql://postgres:postgres@${process.env.POSTGRES_HOST}:5432/postgres`
 });
 
 pgclient.connect();
